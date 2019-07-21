@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text_color_selector" type="color">@color/orange_selector</item>
+    <item name="icon_tint_selector" type="color">@color/orange_selector</item>
+</resources>

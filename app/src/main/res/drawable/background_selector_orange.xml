@@ -2,7 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
     android:enterFadeDuration="@android:integer/config_shortAnimTime"
     android:exitFadeDuration="@android:integer/config_shortAnimTime">
-    <item android:drawable="@drawable/background_disabled_orange" android:state_enabled="false"/>
     <item android:drawable="@drawable/background_pressed_orange" android:state_pressed="true" />
     <item android:drawable="@drawable/background_orange" />
 </selector>
