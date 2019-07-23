@@ -18,6 +18,7 @@ class CheckableIndicatorButton @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr), Checkable {
 
     companion object {
+        //Step 4: introduce checked state
         private val CHECKED_STATE_SET = intArrayOf(android.R.attr.state_checked)
     }
 
@@ -44,6 +45,7 @@ class CheckableIndicatorButton @JvmOverloads constructor(
         children.forEach { it.isEnabled = enabled }
     }
 
+    //Step 4: add checked state to a list of possible states
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
         val drawableState = super.onCreateDrawableState(extraSpace + 1)
         if (isChecked) {
@@ -52,23 +54,25 @@ class CheckableIndicatorButton @JvmOverloads constructor(
         return drawableState
     }
 
+    //Step 3: fire toggle
     override fun performClick(): Boolean {
         toggle()
         return super.performClick()
     }
 
+    // Step 2: overrde Checkable's methods
     override fun isChecked() = checked
 
+    // Step 2: overrde Checkable's methods
     override fun toggle() {
         isChecked = !checked
     }
 
+    // Step 2: overrde Checkable's methods
     override fun setChecked(checked: Boolean) {
         if (this.checked != checked) {
             this.checked = checked
-            text.isChecked = checked
-            icon.isChecked = checked
-            indicator.isChecked = checked
+            children.filter { it is Checkable }.forEach { it.isChecked = checked }
             refreshDrawableState()
         }
     }
