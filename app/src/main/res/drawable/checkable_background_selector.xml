@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@android:integer/config_shortAnimTime"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime">
+    <item android:state_checked="true" android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/deep_orange_300" />
+            <corners android:radius="@dimen/corner_radius" />
+        </shape>
+    </item>
+    <item android:state_checked="true" android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/deep_orange_700" />
+            <corners android:radius="@dimen/corner_radius" />
+        </shape>
+    </item>
+    <item android:state_checked="false" android:state_enabled="false">
+        <shape>
+            <solid android:color="@android:color/white" />
+            <stroke android:width="@dimen/stroke_width" android:color="@color/deep_orange_300" />
+            <corners android:radius="@dimen/corner_radius" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/deep_orange_700" />
+            <corners android:radius="@dimen/corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/deep_orange_50" />
+            <stroke android:width="@dimen/stroke_width" android:color="@color/deep_orange_700" />
+            <corners android:radius="@dimen/corner_radius" />
+        </shape>
+    </item>
+</selector>

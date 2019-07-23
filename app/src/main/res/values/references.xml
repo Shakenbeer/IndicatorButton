@@ -2,4 +2,6 @@
 <resources>
     <item name="text_color_selector" type="color">@color/orange_selector</item>
     <item name="icon_tint_selector" type="color">@color/orange_selector</item>
+    <item name="checkable_text_color_selector" type="color">@color/checkable_orange_selector</item>
+    <item name="checkable_icon_tint_selector" type="color">@color/checkable_orange_selector</item>
 </resources>

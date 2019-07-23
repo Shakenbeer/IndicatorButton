@@ -163,8 +163,6 @@
         android:id="@+id/tmp"
         android:layout_width="80dp"
         android:layout_height="72dp"
-        android:clickable="true"
-        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tmp1"
@@ -175,15 +173,12 @@
 
     </com.shakenbeer.indicatorbutton.IndicatorButton>
 
-    <com.shakenbeer.indicatorbutton.IndicatorButton
+    <com.shakenbeer.indicatorbutton.CheckableIndicatorButton
         android:id="@+id/tmp1"
         android:layout_width="80dp"
         android:layout_height="72dp"
         android:layout_marginStart="8dp"
-        android:background="@drawable/background_selector"
-        android:clickable="true"
         android:enabled="false"
-        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
