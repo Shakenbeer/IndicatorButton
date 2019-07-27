@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<declare-styleable name="IndicatorButton">
-    <attr name="android:enabled" format="boolean"/>
-</declare-styleable>
+    <declare-styleable name="IndicatorButton">
+        <attr name="icon" format="reference" />
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+    </declare-styleable>
+    <declare-styleable name="CheckableIndicatorButton">
+        <attr name="android:checked" />
+    </declare-styleable>
 </resources>

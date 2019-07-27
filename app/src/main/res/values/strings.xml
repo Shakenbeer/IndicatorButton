@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">IndicatorButton</string>
+    <string name="bishop">Bishop</string>
+    <string name="king">King</string>
+    <string name="knight">Knight</string>
+    <string name="emit">Emit</string>
+    <string name="observe">Observe</string>
 </resources>

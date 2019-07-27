@@ -1,17 +1,19 @@
 package com.shakenbeer.indicatorbutton
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.Checkable
 import android.widget.ImageView
 
+@SuppressLint("AppCompatCustomView")
 class CheckableImageView : ImageView, Checkable {
 
     private var mChecked = false
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
     override fun isChecked(): Boolean {
         return mChecked

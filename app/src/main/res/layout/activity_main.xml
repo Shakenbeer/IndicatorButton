@@ -6,163 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/left"
-        android:layout_width="80dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_pressed"
+    <com.shakenbeer.indicatorbutton.IndicatorRadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/chess_bishop"
-            android:tint="#fbe9e7"
-            app:layout_constraintBottom_toTopOf="@+id/text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <com.shakenbeer.indicatorbutton.RadioIndicatorButton
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:text="@string/bishop"
+            app:icon="@drawable/chess_bishop" />
 
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/indicator_checked"
-            android:tint="#fbe9e7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+        <com.shakenbeer.indicatorbutton.RadioIndicatorButton
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:text="@string/king"
+            app:icon="@drawable/chess_king" />
 
-        <CheckedTextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="Bishop"
-            android:textColor="#fbe9e7"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/icon" />
+        <com.shakenbeer.indicatorbutton.RadioIndicatorButton
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:text="@string/knight"
+            app:icon="@drawable/chess_knight" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/center"
-        android:layout_width="80dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_shape"
-        app:layout_constraintStart_toEndOf="@+id/left"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/icon2"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/chess_king"
-            android:tint="#e64a19"
-            app:layout_constraintBottom_toTopOf="@+id/text2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/indicator2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/indicator_checked"
-            android:tint="#e64a19"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <CheckedTextView
-            android:id="@+id/text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="King"
-            android:textColor="#e64a19"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/icon2" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/right"
-        android:layout_width="80dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_shape"
-        app:layout_constraintStart_toEndOf="@+id/center"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/icon3"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/chess_knight"
-            android:tint="#e64a19"
-            app:layout_constraintBottom_toTopOf="@+id/text3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <com.shakenbeer.indicatorbutton.CheckableImageView
-            android:id="@+id/indicator3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/indicator_checked"
-            android:tint="#e64a19"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <CheckedTextView
-            android:id="@+id/text3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="Knight"
-            android:textColor="#e64a19"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/icon3" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.shakenbeer.indicatorbutton.IndicatorRadioGroup>
 
     <com.shakenbeer.indicatorbutton.IndicatorButton
         android:id="@+id/tmp"
         android:layout_width="80dp"
         android:layout_height="72dp"
+        android:text="@string/emit"
+        app:icon="@drawable/chess_knight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tmp1"
@@ -179,6 +59,8 @@
         android:layout_height="72dp"
         android:layout_marginStart="8dp"
         android:enabled="false"
+        android:text="@string/observe"
+        app:icon="@drawable/chess_bishop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
